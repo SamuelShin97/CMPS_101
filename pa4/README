@@ -1,0 +1,37 @@
+Samuel Shin
+CMPS 101
+sayshin@ucsc.edu
+pa4
+-----------------------------------------
+
+List.c
+List.h
+Graph.c
+Graph.h
+GraphTest.c
+FindPath.c
+Makefile
+
+List.c: Holds the implementation for the List ADT including its structs, fields, contructors/destructors, and functions.
+
+List.h: Is the prototype for the List ADT.
+
+Graph.c: Holds the implementaion for the Graph ADT including its structs, fields, constructors/destructors, and functions.
+
+Graph.h: Contains "List.h" and defines constants NIL and INF to be -1 and -5 respectively. Also serves as the prototype for Graph.c.
+
+GraphTest.c: Is a test client for Graph.c and in turn List.c since any client of Graph is a client of List. This file was used for testing certain methods that I 
+needed clarification on for the Graph functions. GDB was called a lot on this file for me personally.
+
+FindPath.c: Takes in an input file that determines the number of vertices in the graph. FindPath then creates an adjacency list of all the vertices and writes it to an output file. FindPath also calls BFS and writes to the output file the shortest path from vertex a to vertex b if it has one. 
+
+Makefile: compiles program and runs valgrind on it and creates executable files to run.
+
+Special Note on FindPath.c: So for some reason I only pass 3/6 tests for FindPath.c thus getting me a 6/10. I checked to see what was wrong in all three cases I was
+failing and it turns out that for some of the adjacency lists, some values are missing but its counter part contains it. For example, in infile5.txt, there is a line 
+in the file "6 1." For some reason 1 is missing 6 but 6 contains 1 in their respective lists and thus messes up some of the path finding stuff. This is just one exampleof many and I ran the debugger on it but I saw that my algorithm in FindPath was working just fine and that 1 was added to the adjacency list of 6 and it also said 
+that 6 was added to the adjacency list of 1. However, whenever I ran Findpath either in ./pa4.sh or in my own test runs, 6 would always be missing in 1's adjacency list
+and I have no idea why this is happening for infile1.txt, infile3.txt, and infile5.txt. When I run infile2.txt, infile4.txt, and infile6.txt it works fine but for some
+reason I could not figure out infile's 1,3,5. They just don't work when I strongly feel like it should especially since addEdge() works the way it should (all Graph
+tests passed) and I'm certain I'm calling it in the right context in FindPath as well. If you could look into this and tell me what's happening I would greatly 
+appreciate it, but I know you guys are behind with grading and if there's a rush than that's okay too I understand. Thank you!

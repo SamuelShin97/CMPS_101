@@ -1,0 +1,20 @@
+Samuel Shin
+CMPS 101 
+sayshin@ucsc.edu
+pa2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------List.h
+List.c
+Lex.c
+ListClient.c
+Makefile
+
+List.h contains the prototypes for the List ADT and is read in to List.c and Lex.c
+List.c contains the implementation for the List ADT and the prototypes for List.h
+Lex.c acts as the client for List ADT. It reads in a file and prints out the lines in sorted order.
+ListClient.c was provided for us on the webpage and serves as a way to test our List.c
+Makefile was provided for us on the webpage and makes an executable file.
+
+Special Notes: My program works but I couldn't figure out the memory leaks. I know some of it was in my clear(L) method in List.c. But whatever I tried it would 
+alleviate some of the leaks but then I'd end up with seg faults or other errors. I tried my hardest to figure out what was wrong but I just couldn't figure out how to 
+solve the issues without getting seg faults so I just left one of the ways I tried to handle the memory leaks commented out in my clear method. I tried my best and 
+put hours of effort into looking into the issue but came up short in the end. Thank you for reading my whereabouts!

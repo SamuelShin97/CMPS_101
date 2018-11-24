@@ -1,0 +1,29 @@
+Samuel Shin
+CMPS 101
+sayshin@ucsc.edu
+pa3
+-----------------------------------------
+
+List.java
+ListTest.java
+Matrix.java
+MatrixTest.java
+Sparse.java
+Makefile
+
+List.java: holds the List ADT from pa1 except now it is a list of objects rather than a list of ints and methods have been modified to accomadate for this change.
+
+ListTest.java: was taken from ListClient.java example in pa1. Since I got a 100% in pa1 I felt there was no need to create my own ListTest.java especially since I got 
+full credit for my list in pa1 and I immediately passed all the cases for list in the grading script. The purpose for ListTest.java was to test my list as I went along
+creating it but since all I had to do was make simple changes in it I felt there was no need for this file. 
+
+Matrix.java: holds the Matrix ADT that allows the client of the Matrix to perform mathematical operations on it efficiently since the Matrix is sparsed. The matrix 
+holds an array of list adt's and stores entry objects into the lists. 
+
+MatrixTest.java: was the tester for my Matrix ADT. I actually used this file as intended which was to test my matrix's methods along the way and see if my 
+implementations worked or not. This was very helpful for me in keeping track in how my matrix was doing in terms if it worked or not. 
+
+Sparse.java: reads in an input file and creates two matrices of the same size and inputs values into the matrices from the input file. Performs operations upon the 
+matrices and outputs the results in an output file.
+
+Makefile: creates executable jar file to run Sparse and compiles all java files in directory  

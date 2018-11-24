@@ -1,0 +1,32 @@
+Samuel Shin
+CMPS 101
+sayshin@ucsc.edu
+pa5
+-----------------------------------------
+
+Makefile
+List.c
+List.h
+Graph.h
+Graph.c
+GraphTest.c
+FindComponents.c
+
+Makefile: compiles program and runs valgrind on it and creates executable files to run.
+
+List.c: Holds the implementation for the List ADT including its structs, fields, contructors/destructors, and functions.
+
+List.h: Is the prototype for the List ADT.
+
+Graph.c: Holds the implementaion for the Graph ADT including its structs, fields, constructors/destructors, and functions.
+
+Graph.h: Contains "List.h" and defines constants NIL and INF to be 0 and -1 respectively. Also serves as the prototype for Graph.c.
+
+GraphTest.c: Is a test client for Graph.c and in turn List.c since any client of Graph is a client of List. This file is basically "GraphClient.c" found
+under examples/pa5 on the class website. It was all I really needed to help me test my Graph functions.
+
+FindComponents.c: This program reads in an input file and constructs a directed graph using the contents of the input list to determine the edges using addArc().
+It then prints out the adjacency list to an output file. Afterwards, the program will run DFS() on the graph constructed while simultaneously altering a List object 
+that is used to determine the order in which vertices are processed during the second run of DFS(). Speaking of the second run of DFS(), the program will then
+take the transpose of the original graph and run DFS() on it in descending finish times from the first run of DFS() (this is what the stack or List object is used for).
+The program will then finally determine the strongly connected components of the original graph by taking the new stack that was created from the second run of DFS().
